@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Templete</title>
+    <title>Travel</title>
 </head>
 <body>
-  
+    <header class="header bg-info text-center pt-5 pb-5">
+        <div class="container header__container">
+            <h1 class="display-4 text-danger m-0">Travel</h1>
+            <!-- https://echo.htmlacademy.ru  -->
+            <form class="mb-5"  action="" method="GET" id="form">
+                <input class="d-inline w-25 form-control" type="number" id="input_type" value="" name="number_change" required>
+                <button class="btn-lg btn-primary" type="submit" id="button">hisoblash</button>
+            </form>
+            <div class="header__wrapper d-flex justify-content-between">
+                <div>
+                    <img class="rounded-circle mb-3" src="./images/img-1.jpg" alt="walk" width="300" height="300" id="img_walk">
+                    <h2 id="result_walk">
+                        0
+                    </h2>
+                </div>
+                <div>
+                    <img class="rounded-circle mb-3" src="./images/img-2.jpg" alt="bike" width="300" height="300" id="img_bike">
+                    <h2 id="result_bike">
+                        0
+                    </h2>
+                </div>
+                <div>
+                    <img class="rounded-circle mb-3" src="./images/img-3.jpg" alt="car" width="300" height="300" id="img_car">
+                    <h2 id="result_car">
+                        0
+                    </h2>
+                </div>
+                <div>
+                    <img class="rounded-circle mb-3" src="./images/img-4.jpg" alt="plane" width="300" height="300" id="img_plane">
+                    <h2 id="result_plane">
+                        0
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="./js/bootstrap.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
