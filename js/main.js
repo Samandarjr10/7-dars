@@ -13,20 +13,19 @@ elForm.addEventListener("submit", function(evt) {
     evt.preventDefault();
     
     var elInput = document.querySelector("#input_type").value.trim();
-    if (elInput <= 0) {
-    }else{
-        var walk = Math.round(elInput / walkSpeed) + " soat" + " " + Math.floor(elInput / walkSpeed) + " min";
 
-        var bike = Math.round(elInput / bikeSpeed) + " soat" + " " + Math.floor(elInput / bikeSpeed) + " min";
-
-        var car = Math.round(elInput / carSpeed) + " soat" + " " + Math.floor(elInput / carSpeed) + " min";
-
-        var plane = Math.round(elInput / planeSpeed) + " soat" + " " + Math.floor(elInput / planeSpeed) + " min";
-    }
+        var spendTimeWalk = elInput / walkSpeed;
+        var spendTimeBike = elInput / bikeSpeed;
+        var spendTimeCar = elInput / carSpeed;
+        var spendTimePlane = elInput / planeSpeed;
+        var minutWalk = Math.ceil(((spendTimeWalk - Math.floor(spendTimeWalk)) * 60));
+        var minutBike = Math.ceil(((spendTimeBike - Math.floor(spendTimeBike)) * 60));
+        var minutCar = Math.ceil(((spendTimeCar - Math.floor(spendTimeCar)) * 60));
+        var minutPlane = Math.ceil(((spendTimePlane - Math.floor(spendTimePlane)) * 60));
     
-    elResultWalk.textContent = walk;
-    elResultBike.textContent = bike;
-    elResultCar.textContent = car;
-    elResultPlane.textContent = plane;
-})
+    elResultWalk.textContent = Math.floor(spendTimeWalk) + "h " + minutWalk + "min ";
+    elResultBike.textContent = Math.floor(spendTimeBike) + "h " + minutBike + "min ";
+    elResultCar.textContent = Math.floor(spendTimeCar) + "h " + minutCar + "min ";
+    elResultPlane.textContent = Math.floor(spendTimePlane) + "h " + minutPlane + "min ";
+});
 
